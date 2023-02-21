@@ -12,6 +12,9 @@ builder.Services.AddControllers();
 //add the dependency injection  of seed class at first when the app starts  i.e creating object for the Seed class
 builder.Services.AddTransient<Seed>();
 
+//add automapper for DTO
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 // dependency injection for all the classes you have created
 builder.Services.AddScoped<IPokemonRepository, PokemonRepository>();
 
