@@ -3,12 +3,14 @@ using PokemonReviewApp.Models;
 using AutoMapper;
 namespace PokemonReviewApp.Helper
 {
-    // used to map the DTO for Swagger
+    // used to map the Objects
     public class MappingProfiles: Profile
     {
         public MappingProfiles()
         {
             CreateMap<Pokemon, PokemonDto>();
+            CreateMap<Category, CategoryDto>();
+            CreateMap<Country, CountryDto>();
         }
     }
 }
