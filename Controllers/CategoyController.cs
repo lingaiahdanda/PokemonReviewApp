@@ -50,7 +50,7 @@ namespace PokemonReviewApp.Controllers
         [ProducesResponseType(400)]
 
         public IActionResult GetPokemonByCategory(int categoryId) {
-            var pokemons = _mapper.Map<PokemonDto>(_categoryRepository.GetPokemonByCatgeory(categoryId));
+            var pokemons = _mapper.Map<List<PokemonDto>>(_categoryRepository.GetPokemonByCatgeory(categoryId));
 
             if (!ModelState.IsValid)
             {
